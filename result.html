@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+
+    <title>Result</title>
+</head>
+<body><fieldset style="margin-top: 50px; margin-left: 300px; margin-right: 300px;"><form>
+  <center>  <h1><b>RESULT</b></h1></center>
+    <p>Predicted Label: {{ predicted_label }}</p>
+    <p>{% if predicted_label == "A" %}
+        <p><b>DISEASE :</b> Cordona</p>
+        <p>Remedies : </p>
+        <p>To manage Cordana leaf spot in banana plants, begin by promptly removing and destroying infected leaves and debris.
+            Implement proper irrigation practices to keep foliage dry, encourage good air circulation, and apply organic mulch to suppress weed growth. 
+            Consider using fungicides in severe cases and maintaining overall plant health through balanced soil pH and fertilization.<br></p>
+    {% endif %}
+</p>
+<p>{% if predicted_label == "B" %}
+    <p>Healthy</p>
+    {% endif %}
+</p>
+<p>{% if predicted_label == "C" %}
+    <p><b>DISEASE :</b> pestalotiopsis</p>
+    <p>Remedies : </p>
+    <p>To address Peatalotiopsis leaf spot in banana plants, start by meticulously removing and disposing of infected leaves to prevent further spread. 
+        Implement proper irrigation methods, such as watering at the base of the plant, and promote good air circulation by spacing plants adequately. 
+        Consider applying fungicides if the disease persists, and maintain overall plant health through proper nutrition and soil management practices. <br></p>
+{% endif %}
+</p>
+<p>{% if predicted_label == "D" %}
+    <p><b>DISEASE :</b> Sigatoka</p>
+    <p>Remedies : </p>
+    <p>To manage Sigatoka leaf spot in banana plants, practice regular sanitation by removing and destroying infected leaves. 
+        Implement a preventive fungicide spray program, focusing on protecting young leaves, and maintain optimal plant spacing for good air circulation. 
+        Additionally, promote overall plant health through proper fertilization and irrigation practices to reduce susceptibility to the disease.</p>
+{% endif %}
+</p>
+
+</form>
+</fieldset>
+</body>
+</html>

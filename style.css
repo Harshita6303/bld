@@ -1,0 +1,90 @@
+/* ===== GENERAL STYLES (applied to both pages) ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff;  /* Light blue background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Center the fieldset/card */
+fieldset {
+    border: 2px solid #4CAF50;  /* Green border */
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    margin: 50px auto;  /* Centers horizontally */
+}
+
+h1 {
+    color: #2E8B57;  /* Dark green */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ===== INDEX.HTML (Upload Form) ===== */
+img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 150px;
+    height: auto;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="file"] {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;  /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;  /* Darker green on hover */
+}
+
+/* ===== RESULT.HTML (Prediction Result) ===== */
+p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+b {
+    color: #2E8B57;  /* Dark green for emphasis */
+}
+
+/* Style disease/remedy sections */
+p > p {
+    margin-left: 20px;
+    padding-left: 10px;
+    border-left: 3px solid #4CAF50;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    fieldset {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    input[type="file"] {
+        width: 95%;
+    }
+}

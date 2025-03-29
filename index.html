@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+
+    <title>Image Classification</title>
+</head>
+<body>
+    
+    <center>
+        <fieldset style="margin-top: 50px; margin-left: 300px; margin-right: 300px;">
+    <b><h1>BANANA LEAF DISEASE PREDICTION </h1></b>
+<img src="https://user-images.githubusercontent.com/30645315/68544440-37ffdd80-03e9-11ea-8acd-3f3f9b6fc8b3.png"></img>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*">
+        <button type="submit">Predict</button>
+    </form>
+</fieldset>
+</center>
+</body>
+</html>
